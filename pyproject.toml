@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "personal-finance-analyzer"
+version = "1.0.0"
+description = "A command-line personal finance analysis and forecasting tool"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "numpy>=1.24,<3.0",
+    "pandas>=2.0,<3.0",
+    "matplotlib>=3.7,<4.0",
+    "statsmodels>=0.14,<1.0",
+    "scipy>=1.10,<2.0",
+    "pmdarima>=2.0,<3.0"
+]
+
+[project.scripts]
+finance-analyzer = "personal_finance_analyzer.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
