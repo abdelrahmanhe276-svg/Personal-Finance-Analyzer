@@ -33,7 +33,7 @@ def main():
 
     analyzer = FinanceAnalyzer(transactions)
     analyzer.monthly_summary().to_csv(
-        output_dir / "monthly sumary.csv",index=False)
+        output_dir / "monthly summary.csv",index=False)
     analyzer.expense_by_category().to_csv(
         output_dir / "expense by category.csv",index=False)
 
